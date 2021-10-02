@@ -110,6 +110,21 @@ const leerDesdeLocalStorage = (clave) =>{
     return jsonConvertidoAObjeto
 }
 console.log(leerDesdeLocalStorage(`primer usuario`))
+//Ejercitación integradora
+//Tratá de usar las funciones declaradas en los ejercicios anteriores.
+
+//Crea una pagina que tenga un titulo que diga "Hola!" y un botón que diga "Iniciar sesión"
+//Al hacer click en el botón Iniciar Sesión, debe hacerse visible un formulario con un campo usuario y otro contraseña, 
+//y un botón para enviar el form.
+//Definí un objeto usuario en javascript en donde estén definidas dos propiedades: nombreUsuario y contrasenia 
+//(o usá los objetos definidos antes).
+//Si los datos ingresados por el usuario en el form coinciden con los guardados en el objeto, la web debe:
+//Mostrar como saludo "Hola {nombreUsuario}"
+//Ocultar el botón "iniciar sesión"
+//Mostrar dos botones nuevos: Cambiar mis datos, Cerrar sesión.
+//Pista: Definí una variable global para guardar si el usuario inició sesión o no, y determinar a partir de ella qué elementos se deben 
+//mostrar en la página.
+
 
 const botonIniciarSesion = document.getElementById("abrirFormulario");
 const mostrarFormulario = document.getElementById("formulario");
@@ -120,7 +135,8 @@ botonIniciarSesion.onclick = () =>{
 
 const nombreDeUsuario = document.getElementById("usuario");
 const botonCambiarDatos = document.getElementById("cambiarDatos");
-const botonCerrarSesion = document.getElementById("cerrarSesion")
+const botonCerrarSesion = document.getElementById("cerrarSesion");
+const contraseniaUsuario = document.getElementById("contrasenia");
 
 const saludar = (objeto) => {
     if(nombreDeUsuario === objeto.nombreDeUsuario && contrasenia===objeto.contrasenia){
